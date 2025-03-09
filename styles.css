@@ -6,24 +6,31 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    padding: 10px; /* Added padding for better spacing on smaller screens */
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
 }
 
 .container {
     background-color: #ffffff;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px; /* Slightly increased width for better layout */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensures internal padding doesn't expand width */
 }
 
 h1 {
     text-align: center;
     color: #4CAF50;
+    font-size: 1.8rem; /* Increased size for better visibility */
+    margin-bottom: 15px; /* Added margin for better spacing */
 }
 
 .input-section {
     display: flex;
+    flex-direction: row;
+    gap: 5px; /* Added gap for consistent spacing */
     margin-bottom: 20px;
 }
 
@@ -33,6 +40,7 @@ input[type="text"] {
     border: 2px solid #4CAF50 !important;
     border-radius: 6px;
     outline: none !important;
+    box-sizing: border-box; /* Prevents input overflow */
 }
 
 button {
@@ -42,7 +50,6 @@ button {
     padding: 10px 15px;
     border-radius: 6px;
     cursor: pointer;
-    margin-left: 5px;
 }
 
 button:hover {
@@ -52,6 +59,7 @@ button:hover {
 ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Removed default margin for consistency */
 }
 
 li {
@@ -74,4 +82,16 @@ li {
 
 .delete-btn:hover {
     background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        display: block; /* Changed to block for improved content flow */
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto; /* Centered for better alignment */
+    }
 }
